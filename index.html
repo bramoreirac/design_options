@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WMC 065 | Design Alternatives</title>
+  <style>
+    :root {
+      --navy: #10263d;
+      --blue: #0073b8;
+      --pale-blue: #eaf4fa;
+      --ink: #1b2b38;
+      --muted: #687783;
+      --line: #d8e1e6;
+      --paper: #ffffff;
+      --background: #f3f6f7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--background);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.45;
+    }
+    header {
+      padding: 48px 24px 42px;
+      color: white;
+      background: linear-gradient(118deg, var(--navy), #174d73);
+    }
+    .wrap { max-width: 1240px; margin: 0 auto; }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #a8d9f3;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1 { margin: 0; font-size: clamp(1.85rem, 4vw, 3rem); letter-spacing: -.03em; }
+    .intro { max-width: 700px; margin: 12px 0 0; color: #dceaf1; }
+    main { padding: 32px 24px 56px; }
+    .section-heading { margin: 0 0 20px; font-size: 1.15rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 18px;
+    }
+    .option {
+      display: flex;
+      min-height: 250px;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgb(20 44 60 / 6%);
+    }
+    .option-head { padding: 20px 20px 16px; border-bottom: 4px solid var(--blue); }
+    .version { margin: 0; color: var(--blue); font-size: .75rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+    h2 { margin: 5px 0 0; font-size: 1.28rem; }
+    .specs { flex: 1; padding: 8px 20px 14px; }
+    .specs p { margin: 10px 0; color: var(--muted); font-size: .9rem; }
+    .spec-row { display: grid; grid-template-columns: 1fr 1.2fr; min-height: 31px; border-bottom: 1px solid #e8edf0; }
+    .spec-row span { padding: 7px 0; font-size: .84rem; }
+    .spec-row span:first-child { color: var(--muted); font-weight: 600; }
+    .spec-row span:last-child { border-bottom: 1px dashed #b7c5cc; }
+    .card-foot { padding: 18px 20px 20px; background: #fbfcfc; }
+    .model-link {
+      display: block;
+      padding: 10px 14px;
+      color: white;
+      background: var(--blue);
+      border-radius: 6px;
+      font-size: .9rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      transition: background .15s ease, transform .15s ease;
+    }
+    .model-link:hover, .model-link:focus { background: #005c96; transform: translateY(-1px); }
+    .viewer-section { margin-top: 38px; scroll-margin-top: 18px; }
+    .viewer-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin: 0 0 12px; }
+    .viewer-heading h2 { margin: 0; }
+    #viewer-status { margin: 0; color: var(--muted); font-size: .88rem; }
+    .viewer-frame {
+      height: min(72vh, 720px);
+      min-height: 460px;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgb(20 44 60 / 6%);
+    }
+    iframe { display: block; width: 100%; height: 100%; border: 0; }
+    .reference-image {
+      display: block;
+      width: 100%;
+      max-height: 680px;
+      object-fit: contain;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgb(20 44 60 / 6%);
+    }
+    .image-caption { margin: 10px 0 0; color: var(--muted); font-size: .86rem; text-align: center; }
+    footer { padding: 0 24px 32px; color: var(--muted); font-size: .8rem; text-align: center; }
+    @media (max-width: 520px) { header { padding: 36px 20px 32px; } main { padding: 24px 16px 40px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Engineering review</p>
+      <h1>WMC 065 Design Alternatives</h1>
+      <p class="intro">Select an alternative to open its interactive eDrawings 3D model.</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <h2 class="section-heading">Compare alternatives</h2>
+    <section class="grid" aria-label="Design alternatives">
+      <article class="option"><div class="option-head"><p class="version">Alternative 01</p><h2>Version 1.9</h2></div><div class="specs"><p>Basic specifications</p><div class="spec-row"><span>Body shell thickness:</span><span>10ga</span></div><div class="spec-row"><span>Base plate thickness:</span><span>3/16"</span></div><div class="spec-row"><span>Max deflection:</span><span>0.140"</span></div><div class="spec-row"><span>Weight:</span><span>1519.69 lbs</span></div></div><div class="card-foot"><a class="model-link" href="#viewer" data-model="SWMC_065-00_v1.9.html" data-version="Version 1.9">View 3D Model</a></div></article>
+      <article class="option"><div class="option-head"><p class="version">Alternative 02</p><h2>Version 2.1</h2></div><div class="specs"><p>Basic specifications</p><div class="spec-row"><span>Body shell thickness:</span><span>10ga</span></div><div class="spec-row"><span>Base plate thickness:</span><span>3/16"</span></div><div class="spec-row"><span>Max deflection:</span><span>0.133"</span></div><div class="spec-row"><span>Weight:</span><span>1530.64 lbs</span></div></div><div class="card-foot"><a class="model-link" href="#viewer" data-model="SWMC_065-00_v2.1.html" data-version="Version 2.1">View 3D Model</a></div></article>
+      <article class="option"><div class="option-head"><p class="version">Alternative 03</p><h2>Version 2.2</h2></div><div class="specs"><p>Basic specifications</p><div class="spec-row"><span>Body shell thickness:</span><span>10ga</span></div><div class="spec-row"><span>Base plate thickness:</span><span>3/16"</span></div><div class="spec-row"><span>Max deflection:</span><span>0.133"</span></div><div class="spec-row"><span>Weight:</span><span>1513.71 lbs</span></div></div><div class="card-foot"><a class="model-link" href="#viewer" data-model="SWMC_065-00_v2.2.html" data-version="Version 2.2">View 3D Model</a></div></article>
+      <article class="option"><div class="option-head"><p class="version">Alternative 04</p><h2>Version 2.4</h2></div><div class="specs"><p>Basic specifications</p><div class="spec-row"><span>Body shell thickness:</span><span>11ga</span></div><div class="spec-row"><span>Base plate thickness:</span><span>10ga</span></div><div class="spec-row"><span>Max deflection:</span><span>0.119"</span></div><div class="spec-row"><span>Weight:</span><span>1389.39 lbs</span></div></div><div class="card-foot"><a class="model-link" href="#viewer" data-model="SWMC_065-00_v2.4.html" data-version="Version 2.4">View 3D Model</a></div></article>
+      <article class="option"><div class="option-head"><p class="version">Alternative 05</p><h2>Version 2.6</h2></div><div class="specs"><p>Basic specifications</p><div class="spec-row"><span>Body shell thickness:</span><span>11ga</span></div><div class="spec-row"><span>Base plate thickness:</span><span>10ga</span></div><div class="spec-row"><span>Max deflection:</span><span>0.135"</span></div><div class="spec-row"><span>Weight:</span><span>1374.93 lbs</span></div></div><div class="card-foot"><a class="model-link" href="#viewer" data-model="SWMC_065-00_v2.6.html" data-version="Version 2.6">View 3D Model</a></div></article>
+      <article class="option"><div class="option-head"><p class="version">Alternative 06</p><h2>Version 3.0</h2></div><div class="specs"><p>Basic specifications</p><div class="spec-row"><span>Body shell thickness:</span><span>11ga</span></div><div class="spec-row"><span>Base plate thickness:</span><span>10ga</span></div><div class="spec-row"><span>Max deflection:</span><span>0.098"</span></div><div class="spec-row"><span>Weight:</span><span>1396.93 lbs</span></div></div><div class="card-foot"><a class="model-link" href="#viewer" data-model="SWMC_065-00_v3.0.html" data-version="Version 3.0">View 3D Model</a></div></article>
+      <article class="option"><div class="option-head"><p class="version">Alternative 07</p><h2>Version 3.1</h2></div><div class="specs"><p>Basic specifications</p><div class="spec-row"><span>Body shell thickness:</span><span>11ga</span></div><div class="spec-row"><span>Base plate thickness:</span><span>10ga</span></div><div class="spec-row"><span>Max deflection:</span><span>0.098"</span></div><div class="spec-row"><span>Weight:</span><span>1394.72 lbs</span></div></div><div class="card-foot"><a class="model-link" href="#viewer" data-model="SWMC_065-00_v3.1.html" data-version="Version 3.1">View 3D Model</a></div></article>
+    </section>
+    <section class="viewer-section" id="viewer" aria-labelledby="viewer-title">
+      <div class="viewer-heading"><h2 id="viewer-title">3D model viewer</h2><p id="viewer-status" aria-live="polite">Showing Version 3.1</p></div>
+      <div class="viewer-frame"><iframe id="model-viewer" title="SWMC 065 3D model viewer" src="SWMC_065-00_v3.1.html" allowfullscreen></iframe></div>
+      <figure>
+        <img id="reference-image" class="reference-image" src="images/SWMC_065-00_v3.1.png" alt="Reference image for SWMC 065 Version 3.1">
+        <figcaption id="image-caption" class="image-caption">Reference image — Version 3.1</figcaption>
+      </figure>
+    </section>
+  </main>
+  <footer>WMC 065 · Engineering design comparison</footer>
+  <script>
+    const viewer = document.getElementById('model-viewer');
+    const status = document.getElementById('viewer-status');
+    const image = document.getElementById('reference-image');
+    const caption = document.getElementById('image-caption');
+    document.querySelectorAll('[data-model]').forEach((link) => {
+      link.addEventListener('click', () => {
+        viewer.src = link.dataset.model;
+        status.textContent = `Showing ${link.dataset.version}`;
+        image.src = `images/${link.dataset.model.replace('.html', '.png')}`;
+        image.alt = `Reference image for SWMC 065 ${link.dataset.version}`;
+        caption.textContent = `Reference image — ${link.dataset.version}`;
+      });
+    });
+  </script>
+</body>
+</html>
